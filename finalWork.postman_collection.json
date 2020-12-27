@@ -193,36 +193,6 @@
 					"response": []
 				},
 				{
-					"name": "Post - Dar de alta un post",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"usuario\": 1,\r\n    \"post\": {\r\n        \"titulo\": \"post 1\",\r\n        \"descripcion\": \"desc post 1\",\r\n        \"contenido\": \"contenido post 1\",\r\n        \"publicado\": true\r\n    }\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:8080/api/v1/post",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"api",
-								"v1",
-								"post"
-							]
-						}
-					},
-					"response": []
-				},
-				{
 					"name": "Get - Obtener Todos los Post que contengan una palabra dada en el titutlo",
 					"request": {
 						"method": "GET",
@@ -271,6 +241,36 @@
 									"key": "publicado",
 									"value": "false"
 								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post - Dar de alta un post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"usuario\": 1,\r\n    \"post\": {\r\n        \"titulo\": \"post 1\",\r\n        \"descripcion\": \"desc post 1\",\r\n        \"contenido\": \"contenido post 1\",\r\n        \"publicado\": true\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/post",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"post"
 							]
 						}
 					},
@@ -352,6 +352,35 @@
 								"post",
 								"1",
 								"comentario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get - Obtener Todos los Comentarios con limite",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/post/1/comentario?cant=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"post",
+								"1",
+								"comentario"
+							],
+							"query": [
+								{
+									"key": "cant",
+									"value": "3"
+								}
 							]
 						}
 					},
